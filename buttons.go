@@ -61,7 +61,7 @@ func (d *Driver) pollButtons() {
 
 		now := time.Now()
 		for _, btn := range Buttons {
-			currentPress := (state>>btn)&1 == 1
+			currentPress := (state>>btn)&1 == 0
 			start, wasPressed := d.buttonState[btn]
 			if currentPress && !wasPressed {
 				// This is a new press - mark the time and signal
