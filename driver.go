@@ -47,7 +47,6 @@ type Driver struct {
 	i2c             conn.Conn
 	pressHandlers   map[Button][]chan<- struct{}
 	releaseHandlers map[Button][]chan<- time.Duration
-	frame           byte
 	// Indicates the pressed time if the button is currently pressed
 	buttonState map[Button]time.Time
 	// Communicates new colors to the LED color goroutine

@@ -80,5 +80,3 @@ func (q *queue) writeByte(b byte) {
 		b <<= 1
 	}
 }
-
-const chunkSize = 32
